@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Inclusão nas Escolas</title>
-  <meta name="description" content="Site didático e acessível sobre inclusão nas escolas. Conteúdo para alunos e professores: deficiências, estratégias e recursos." />
+  <meta name="description" content="Site didático e acessível sobre inclusão nas escolas. Conteúdo para alunos: deficiências, estratégias e recursos para apoiar colegas." />
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
     *{box-sizing:border-box}
@@ -23,11 +23,8 @@
     section.card{margin-top:18px;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
     ul{padding-left:18px}
-    .tag{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;color:var(--muted);font-size:13px}
     footer{color:var(--muted);text-align:center;padding:18px;margin-top:30px}
-    /* responsive */
     @media (max-width:900px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr}}
-    /* accessibility helpers */
     .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#fff;color:#000;padding:8px;border-radius:6px}
   </style>
@@ -39,7 +36,7 @@
       <div class="logo" aria-hidden>IN</div>
       <div>
         <div style="font-weight:700;color:#fff">Inclusão nas Escolas</div>
-        <div style="font-size:13px;color:var(--muted)">Empatia, respeito e acessibilidade</div>
+        <div style="font-size:13px;color:var(--muted)">Empatia, respeito e apoio a todos</div>
       </div>
     </div>
     <nav aria-label="Navegação principal">
@@ -107,6 +104,16 @@
         </div>
 
         <div>
+          <h3>Deficiência intelectual</h3>
+          <p style="color:var(--muted)">Affecta aprendizado, memória e resolução de problemas. Pode variar de leve a grave.</p>
+          <ul>
+            <li>Use instruções claras e repetição quando necessário.</li>
+            <li>Ofereça apoio para organizar tarefas e compreender conceitos.</li>
+            <li>Valorize pequenos progressos e conquistas individuais.</li>
+          </ul>
+        </div>
+
+        <div>
           <h3>Múltiplas deficiências</h3>
           <p style="color:var(--muted)">Combinação de duas ou mais deficiências.</p>
           <ul>
@@ -132,7 +139,6 @@
             <li>Respeite a necessidade de rotina e ambiente calmo.</li>
           </ul>
         </div>
-
       </div>
     </section>
 
@@ -164,62 +170,4 @@
         <div>
           <h3>Tecnologias assistivas</h3>
           <ul>
-            <li>Leitores de tela (NVDA, VoiceOver).</li>
-            <li>Intérprete de Libras e vídeos legendados.</li>
-            <li>Materiais em braille e fontes ampliadas.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Atitudes simples</h3>
-          <ul>
-            <li>Falar de forma clara e calma.</li>
-            <li>Oferecer materiais em diferentes formatos.</li>
-            <li>Ser paciente e acolhedor.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="readme" aria-labelledby="readme-title">
-      <h2 id="readme-title">README</h2>
-      <p style="color:var(--muted)">Conteúdo pronto para orientar outros colegas sobre como praticar inclusão, empatia e respeito no dia a dia escolar.</p>
-    </section>
-
-    <footer>
-      <div>Este site foi desenvolvido com o objetivo de incentivar empatia, respeito e inclusão entre os alunos.</div>
-      <div style="margin-top:6px">Inclusão é responsabilidade de todos nós.</div>
-    </footer>
-  </main>
-
-  <script>
-    const body = document.body;
-    const toggleContrast = document.getElementById('toggle-contrast');
-    const aumentarFonte = document.getElementById('aumentar-fonte');
-    const diminuirFonte = document.getElementById('diminuir-fonte');
-    const lerTexto = document.getElementById('ler-texto');
-    let fontScale = 1;
-
-    toggleContrast.addEventListener('click',()=>{
-      if(document.documentElement.style.getPropertyValue('--accent')===''){
-        document.documentElement.style.setProperty('--accent','#ffd166');
-        document.documentElement.style.setProperty('--card','#1b2933');
-      } else {
-        document.documentElement.style.setProperty('--accent','#06b6d4');
-        document.documentElement.style.setProperty('--card','#0b1220');
-      }
-    });
-    aumentarFonte.addEventListener('click',()=>{fontScale = Math.min(1.6,fontScale+0.1); document.documentElement.style.fontSize=(fontScale*16)+'px'});
-    diminuirFonte.addEventListener('click',()=>{fontScale = Math.max(0.9,fontScale-0.1); document.documentElement.style.fontSize=(fontScale*16)+'px'});
-
-    lerTexto.addEventListener('click',()=>{
-      const text = document.querySelector('main').innerText;
-      if('speechSynthesis' in window){
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = 'pt-BR';
-        speechSynthesis.cancel();
-        speechSynthesis.speak(utter);
-      } else alert('Navegador não suporta síntese de voz.');
-    });
-  </script>
-</body>
-</html>
+            <li>Leitores de tela (NVDA, VoiceOver
