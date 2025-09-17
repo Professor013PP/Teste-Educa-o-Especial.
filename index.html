@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inclusão nas Escolas — Projeto Educacional</title>
-  <meta name="description" content="Site didático e acessível sobre inclusão nas escolas. Conteúdo para alunos e professores: deficiências, estratégias, planos de aula e recursos." />
+  <title>Inclusão nas Escolas</title>
+  <meta name="description" content="Site didático e acessível sobre inclusão nas escolas. Conteúdo para alunos e professores: deficiências, estratégias e recursos." />
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
     *{box-sizing:border-box}
@@ -25,16 +25,11 @@
     ul{padding-left:18px}
     .tag{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;color:var(--muted);font-size:13px}
     footer{color:var(--muted);text-align:center;padding:18px;margin-top:30px}
-    .controls small{color:var(--muted);align-self:center}
     /* responsive */
     @media (max-width:900px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr}}
     /* accessibility helpers */
     .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#fff;color:#000;padding:8px;border-radius:6px}
-    .toc{display:flex;flex-direction:column;gap:8px}
-    .toc a{color:var(--muted);text-decoration:none}
-    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
-    .read-controls{display:flex;gap:8px;align-items:center}
   </style>
 </head>
 <body>
@@ -44,11 +39,10 @@
       <div class="logo" aria-hidden>IN</div>
       <div>
         <div style="font-weight:700;color:#fff">Inclusão nas Escolas</div>
-        <div style="font-size:13px;color:var(--muted)">Projeto pedagógico — apresentação estudantil</div>
+        <div style="font-size:13px;color:var(--muted)">Empatia, respeito e acessibilidade</div>
       </div>
     </div>
     <nav aria-label="Navegação principal">
-      <a href="#sobre">Sobre</a>
       <a href="#deficiencias">Deficiências</a>
       <a href="#praticas">Práticas</a>
       <a href="#recursos">Recursos</a>
@@ -59,125 +53,107 @@
   <main id="maincontent">
     <div class="hero" role="region" aria-labelledby="hero-title">
       <div>
-        <h1 id="hero-title">Inclusão nas Escolas — guia prático e acessível</h1>
-        <p class="lead">Um site didático para apresentação em sala: o conteúdo resume tipos de deficiência, estratégias de apoio, planos de aula e atividades — tudo pensado para ser acessível e facilmente apresentado por estudantes.</p>
+        <h1 id="hero-title">Inclusão nas Escolas</h1>
+        <p class="lead">Um espaço para compreender, abraçar e apoiar colegas com diferentes necessidades. A inclusão começa com empatia, respeito e atitudes de apoio no dia a dia.</p>
 
         <div class="controls" aria-hidden>
           <button class="btn" id="toggle-contrast">Alto contraste</button>
           <button class="btn secondary" id="aumentar-fonte">A+ Fonte</button>
           <button class="btn secondary" id="diminuir-fonte">A- Fonte</button>
           <button class="btn" id="ler-texto">Ler em voz alta</button>
-          <small>Use as ferramentas para demonstrar recursos de acessibilidade.</small>
         </div>
-
-        <section class="card" aria-labelledby="sobre">
-          <h2 id="sobre">Como usar este site</h2>
-          <p style="color:var(--muted)">Feito para ser apresentado por alunos: cada seção tem pontos-chave (bullet), exemplos práticos e atividades rápidas para envolver a turma. Use os controles acima para demonstrar adaptações (alto contraste, aumento de fonte e leitor de tela).</p>
-          <div style="margin-top:12px" class="tag">Duração recomendada: 20–30 min</div>
-        </section>
-
-        <section class="card" id="deficiencias" aria-labelledby="def-title">
-          <h2 id="def-title">Principais deficiências e como adaptá-las</h2>
-          <div class="grid">
-            <div>
-              <h3>Deficiência visual</h3>
-              <p style="color:var(--muted)">Condição que reduz a acuidade visual ou o campo visual. Pode ser classificada como cegueira (total, legal, parcial) ou baixa visão (graus leve, moderado, grave, profundo).</p>
-              <ul>
-                <li><strong>Adaptações:</strong> material em braille, audiodescrição, leitura por voz, fontes grandes, alto contraste, iluminação adequada e etiquetas em relevo.</li>
-                <li><strong>Exemplo em sala:</strong> oferecer textos em audio e versão digital com leitor de tela; descrever imagens durante apresentações.</li>
-              </ul>
-            </div>
-            <div>
-              <h3>Deficiência auditiva</h3>
-              <p style="color:var(--muted)">Redução parcial ou total da audição que afeta a comunicação.</p>
-              <ul>
-                <li><strong>Adaptações:</strong> legendas, intérprete de Libras, materiais visuais, dispositivos FM e comunicação por texto.</li>
-                <li><strong>Exemplo em sala:</strong> projetar slides claros, usar gestos, e revisar conteúdos por escrito.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3>Deficiência física</h3>
-              <p style="color:var(--muted)">Limitações motoras que exigem adaptações do espaço e dos recursos.</p>
-              <ul>
-                <li><strong>Adaptações:</strong> rampas, mesas adaptáveis, dispositivos de apoio, tempo extra e acessibilidade digital (navegação por teclado).</li>
-                <li><strong>Exemplo em sala:</strong> reorganizar as mesas, garantir rota livre e atividades que valorizem diferentes habilidades.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3>Múltiplas deficiências</h3>
-              <p style="color:var(--muted)">Combinação de duas ou mais deficiências que exige planejamento individualizado.</p>
-              <ul>
-                <li><strong>Adaptações:</strong> equipe multiprofissional, plano de ensino individualizado (PEI), comunicação aumentativa e assistiva.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3>Síndrome de Down</h3>
-              <p style="color:var(--muted)">Condição genética com impacto no desenvolvimento cognitivo e físico; potencial para inclusão com apoio.</p>
-              <ul>
-                <li><strong>Adaptações:</strong> instruções claras, rotinas previsíveis, recursos visuais e aprendizagem por tarefas práticas.</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3>Transtorno do Espectro Autista (TEA)</h3>
-              <p style="color:var(--muted)">Alterações no desenvolvimento social e comunicativo com variados níveis de suporte.</p>
-              <ul>
-                <li><strong>Adaptações:</strong> rotina visual, comunicação direta, ambiente com poucos estímulos e planejamento de transições.</li>
-                <li><strong>Prática:</strong> usar cartões visuais, cronogramas e zonas de calma.</li>
-              </ul>
-            </div>
-
-          </div>
-        </section>
-
       </div>
 
       <aside aria-label="Painel lateral" style="padding:8px">
         <div class="card" style="background:linear-gradient(180deg,#061426,#071428);padding:14px;color:var(--muted);border-radius:12px">
-          <h3 style="color:white">Sumário para apresentação</h3>
-          <ol style="color:var(--muted)">
-            <li>Introdução curta (1 min)</li>
-            <li>Definições essenciais (3–4 min)</li>
-            <li>Exemplos e adaptações (8–10 min)</li>
-            <li>Atividade prática (5–8 min)</li>
-            <li>Q&A e conclusão (3–4 min)</li>
-          </ol>
-          <div style="margin-top:10px" class="badge">Atividade: role-play de 2 min</div>
-        </div>
-
-        <div style="margin-top:12px;padding:12px;background:var(--card);border-radius:12px;color:var(--muted)">
-          <h4 style="color:white">Atividades sugeridas</h4>
+          <h3 style="color:white">Lembre-se sempre:</h3>
           <ul>
-            <li>Simulação com tampões/óculos para entender barreiras sensoriais.</li>
-            <li>Criação de legendas e linguagem simples para um vídeo curto.</li>
-            <li>Mapa tátil da escola (cartolina e texturas).</li>
+            <li>Respeitar as diferenças.</li>
+            <li>Praticar empatia.</li>
+            <li>Oferecer ajuda quando necessário.</li>
+            <li>Valorizar cada pessoa como única.</li>
           </ul>
         </div>
       </aside>
     </div>
 
-    <section class="card" id="praticas" aria-labelledby="praticas-title">
-      <h2 id="praticas-title">Práticas inclusivas — guias rápidos para professores</h2>
+    <section class="card" id="deficiencias" aria-labelledby="def-title">
+      <h2 id="def-title">Principais deficiências e como apoiar</h2>
       <div class="grid">
         <div>
-          <h3>Planejamento Universal</h3>
-          <p style="color:var(--muted)">Planejar para diversas necessidades desde o início: múltiplas formas de entrada, engajamento e expressão.</p>
+          <h3>Deficiência visual</h3>
+          <p style="color:var(--muted)">Pode ser cegueira total, parcial ou baixa visão. Necessita de materiais em braille, leitores de tela, alto contraste e descrição de imagens.</p>
           <ul>
-            <li>Oferecer material em texto e áudio.</li>
-            <li>Atividades em pares e grupos heterogêneos.</li>
-            <li>Avaliações alternativas (portfólios, apresentações).</li>
+            <li>Descreva imagens ou situações para colegas com baixa visão.</li>
+            <li>Ofereça apoio respeitando sempre a autonomia da pessoa.</li>
           </ul>
         </div>
         <div>
-          <h3>Avaliação e acompanhamento</h3>
-          <p style="color:var(--muted)">Registro de progressos, metas individuais e comunicação com família.</p>
+          <h3>Deficiência auditiva</h3>
+          <p style="color:var(--muted)">Redução parcial ou total da audição.</p>
           <ul>
-            <li>PEI: metas claras e revisões periódicas.</li>
-            <li>Feedback construtivo e adaptado.</li>
+            <li>Fale de frente, articule bem e use recursos visuais.</li>
+            <li>Valorize a Libras e incentive a comunicação inclusiva.</li>
           </ul>
+        </div>
+
+        <div>
+          <h3>Deficiência física</h3>
+          <p style="color:var(--muted)">Limitações motoras que exigem adaptações do espaço.</p>
+          <ul>
+            <li>Garanta acessibilidade nos ambientes.</li>
+            <li>Ajude em tarefas práticas quando solicitado.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Múltiplas deficiências</h3>
+          <p style="color:var(--muted)">Combinação de duas ou mais deficiências.</p>
+          <ul>
+            <li>Pratique paciência e escuta atenta.</li>
+            <li>Respeite o tempo de cada colega.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Síndrome de Down</h3>
+          <p style="color:var(--muted)">Condição genética que afeta o desenvolvimento cognitivo e físico.</p>
+          <ul>
+            <li>Estimule a participação em grupo.</li>
+            <li>Use linguagem clara e simples.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Transtorno do Espectro Autista (TEA)</h3>
+          <p style="color:var(--muted)">Pode afetar comunicação, interação e sensibilidade a estímulos.</p>
+          <ul>
+            <li>Seja claro e objetivo na comunicação.</li>
+            <li>Respeite a necessidade de rotina e ambiente calmo.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card" id="praticas" aria-labelledby="praticas-title">
+      <h2 id="praticas-title">Práticas inclusivas no dia a dia</h2>
+      <div class="grid">
+        <div>
+          <h3>Empatia</h3>
+          <p style="color:var(--muted)">Coloque-se no lugar do outro, respeitando suas necessidades e dificuldades.</p>
+        </div>
+        <div>
+          <h3>Respeito</h3>
+          <p style="color:var(--muted)">Cada pessoa tem seu jeito de aprender e se expressar. Valorize essas diferenças.</p>
+        </div>
+        <div>
+          <h3>Ajuda mútua</h3>
+          <p style="color:var(--muted)">Ofereça ajuda, mas sempre pergunte antes se a pessoa deseja esse apoio.</p>
+        </div>
+        <div>
+          <h3>Valorização</h3>
+          <p style="color:var(--muted)">Reconheça os talentos e conquistas de cada colega.</p>
         </div>
       </div>
     </section>
@@ -188,43 +164,34 @@
         <div>
           <h3>Tecnologias assistivas</h3>
           <ul>
-            <li>Leitores de tela (NVDA, VoiceOver)</li>
-            <li>Intérpretes de Libras e vídeos legendados</li>
-            <li>Softwares de comunicação alternativa</li>
+            <li>Leitores de tela (NVDA, VoiceOver).</li>
+            <li>Intérprete de Libras e vídeos legendados.</li>
+            <li>Materiais em braille e fontes ampliadas.</li>
           </ul>
         </div>
         <div>
-          <h3>Materiais de sala</h3>
+          <h3>Atitudes simples</h3>
           <ul>
-            <li>Cartazes com linguagem simples</li>
-            <li>Materiais táteis e texturas</li>
-            <li>Modelos de cronograma visual</li>
+            <li>Falar de forma clara e calma.</li>
+            <li>Oferecer materiais em diferentes formatos.</li>
+            <li>Ser paciente e acolhedor.</li>
           </ul>
         </div>
-      </div>
-
-      <div style="margin-top:12px;color:var(--muted)">
-        <strong>Biblioteca rápida:</strong> artigos, vídeos e exemplos de atividades. (Para apresentação, indique 1–2 links confiáveis.)
       </div>
     </section>
 
     <section class="card" id="readme" aria-labelledby="readme-title">
-      <h2 id="readme-title">README (arquivo para o repositório GitHub)</h2>
-      <p style="color:var(--muted)">Baixe o README pronto para subir ao GitHub com instruções de deploy (GitHub Pages), estrutura de pastas e créditos.</p>
-      <div style="margin-top:12px;display:flex;gap:8px">
-        <button class="btn" id="download-readme">Baixar README.md</button>
-        <button class="btn secondary" id="download-site">Baixar página (index.html)</button>
-      </div>
+      <h2 id="readme-title">README</h2>
+      <p style="color:var(--muted)">Conteúdo pronto para orientar outros colegas sobre como praticar inclusão, empatia e respeito no dia a dia escolar.</p>
     </section>
 
     <footer>
-      <div>Feito por alunos — conteúdo revisado e complementado para ser didático e acessível.</div>
-      <div style="margin-top:6px">Instruções GitHub: criar repositório, adicionar arquivos e ativar Pages na branch <code>main</code>.</div>
+      <div>Este site foi desenvolvido com o objetivo de incentivar empatia, respeito e inclusão entre os alunos.</div>
+      <div style="margin-top:6px">Inclusão é responsabilidade de todos nós.</div>
     </footer>
   </main>
 
   <script>
-    // Accessibility toggles
     const body = document.body;
     const toggleContrast = document.getElementById('toggle-contrast');
     const aumentarFonte = document.getElementById('aumentar-fonte');
@@ -253,24 +220,6 @@
         speechSynthesis.speak(utter);
       } else alert('Navegador não suporta síntese de voz.');
     });
-
-    // README content (generated) and download functions
-    const README = `# Inclusão nas Escolas\n\nProjeto: site didático criado por alunos para apresentar, sensibilizar e informar a comunidade escolar sobre inclusão e acessibilidade.\n\n## Estrutura do repositório\n- index.html — página principal (contém CSS e JS inline para facilitar deploy no GitHub Pages)\n- assets/ — imagens e recursos (opcional)\n- README.md — este arquivo\n\n## Como usar / Deploy\n1. Crie um novo repositório no GitHub.\n2. Faça upload do arquivo index.html (e da pasta assets, se houver).\n3. Vá em Settings → Pages (ou GitHub Pages) e selecione a branch `main` e root como pasta.\n4. Aguarde alguns minutos e acesse https://<seu-usuario>.github.io/<seu-repositorio>/\n\n## Como apresentar em sala\n- Duração sugerida: 20–30 minutos.\n- Use as ferramentas de acessibilidade (alto contraste, aumento de fonte, leitor de tela).\n- Atividade prática: mapa tátil ou criação de legendas.\n\n## Conteúdo resumido\n- Deficiência visual: cegueira (total, legal, parcial) e baixa visão (graus leve a profundo). Acomodações: braille, leitores de tela, audiodescrição, alto contraste.\n- Deficiência auditiva: legendas, intérprete de Libras, reforço visual.\n- Deficiência física: adaptação do espaço, dispositivos de apoio.\n- Síndrome de Down: rotinas previsíveis, instruções claras, aprendizagem prática.\n- TEA: rotinas visuais, ambientes com menos estímulos, comunicação direta.\n- Múltiplas deficiências: PEI, equipe multiprofissional.\n\n## Créditos\nConteúdo escrito por alunos e revisado/expandido por equipe pedagógica.\n\n## Licença\nCC BY-SA — sinta-se livre para adaptar e compartilhar com atribuição.\n`;
-
-    function download(filename, text){
-      const blob = new Blob([text], {type: 'text/plain;charset=utf-8'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-    }
-    document.getElementById('download-readme').addEventListener('click',()=>download('README.md',README));
-    document.getElementById('download-site').addEventListener('click',()=>{
-      const html = '<!doctype html>' + document.documentElement.outerHTML;
-      download('index.html',html);
-    });
-
-    // Also make README link scroll
-    document.getElementById('readme-link').addEventListener('click',(e)=>{e.preventDefault(); document.getElementById('readme').scrollIntoView({behavior:'smooth'})});
   </script>
 </body>
 </html>
