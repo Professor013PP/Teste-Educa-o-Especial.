@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Inclusão nas Escolas</title>
+  <title>Mãos Unidas</title>
   <meta name="description" content="Site didático e acessível sobre inclusão nas escolas. Conteúdo para alunos: deficiências, estratégias e recursos para apoiar colegas." />
   <style>
     :root {
@@ -26,7 +26,7 @@
     header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center; /* Centralizando o conteúdo */
       padding: 20px;
       gap: 12px;
     }
@@ -34,6 +34,8 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      flex-direction: column; /* Alinhando o logo e o texto verticalmente */
+      text-align: center; /* Centralizando o texto */
     }
     .logo {
       width: 56px;
@@ -67,7 +69,7 @@
     }
     h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 32px; /* Aumentando o tamanho da fonte */
       color: white;
     }
     p.lead {
@@ -75,24 +77,7 @@
       margin-top: 8px;
     }
     .controls {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-    button, .btn {
-      background: var(--accent);
-      border: none;
-      color: #042028;
-      padding: 10px 14px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-    .btn.secondary {
-      background: transparent;
-      color: var(--muted);
-      border: 1px solid rgba(255, 255, 255, 0.04);
+      display: none; /* Removendo os controles */
     }
     section.card {
       margin-top: 18px;
@@ -151,10 +136,10 @@
   <a href="#maincontent" class="skip-link">Ir para o conteúdo</a>
   <header>
     <div class="brand">
-      <div class="logo" aria-hidden>IN</div>
+      <div class="logo" aria-hidden>ACOLHER</div>
       <div>
-        <div style="font-weight: 700; color: #fff">Inclusão nas Escolas</div>
-        <div style="font-size: 13px; color: var(--muted)">Empatia, respeito e apoio a todos</div>
+        <div style="font-weight: 700; color: #fff">Mãos Unidas</div> <!-- Alterado para "Mãos Unidas" -->
+        <div style="font-size: 13px; color: var(--muted)">Inclusão nas Escolas</div>
       </div>
     </div>
     <nav aria-label="Navegação principal">
@@ -170,12 +155,7 @@
         <h1 id="hero-title">Inclusão nas Escolas</h1>
         <p class="lead">Um espaço para compreender, abraçar e apoiar colegas com diferentes necessidades. A inclusão começa com empatia, respeito e atitudes de apoio no dia a dia.</p>
 
-        <div class="controls" aria-hidden>
-          <button class="btn" id="toggle-contrast">Alto contraste</button>
-          <button class="btn secondary" id="aumentar-fonte">A+ Fonte</button>
-          <button class="btn secondary" id="diminuir-fonte">A- Fonte</button>
-          <button class="btn" id="ler-texto">Ler em voz alta</button>
-        </div>
+        <!-- Removido a div de controles -->
       </div>
 
       <aside aria-label="Painel lateral" style="padding: 8px">
@@ -192,7 +172,7 @@
     </div>
 
     <section class="card" id="deficiencias" aria-labelledby="def-title">
-      <h2 id="def-title">Principais condições e Como Apoiar</h2>
+      <h2 id="def-title">PRINCIPAIS CONDIÇÕES E COMO APOIAR</h2>
       <div class="grid">
         <div>
           <h3>Deficiência Visual</h3>
