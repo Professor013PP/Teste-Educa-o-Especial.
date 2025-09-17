@@ -6,27 +6,146 @@
   <title>Inclusão nas Escolas</title>
   <meta name="description" content="Site didático e acessível sobre inclusão nas escolas. Conteúdo para alunos: deficiências, estratégias e recursos para apoiar colegas." />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.04)}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#071023 0%, #082035 60%)}
-    header{display:flex;align-items:center;justify-content:space-between;padding:20px;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:#042028;font-weight:700}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
-    main{max-width:1100px;margin:18px auto;padding:20px}
-    .hero{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:28px;border-radius:14px;display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center}
-    h1{margin:0;font-size:28px;color:white}
-    p.lead{color:var(--muted);margin-top:8px}
-    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-    button, .btn{background:var(--accent);border:none;color:#042028;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
-    .btn.secondary{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
-    section.card{margin-top:18px;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    ul{padding-left:18px}
-    footer{color:var(--muted);text-align:center;padding:18px;margin-top:30px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:1fr}}
-    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#fff;color:#000;padding:8px;border-radius:6px}
+    :root {
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #06b6d4;
+      --muted: #94a3b8;
+      --glass: rgba(255, 255, 255, 0.04);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color: #e6eef6;
+      background: linear-gradient(180deg, #071023 0%, #082035 60%);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #7c3aed);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #042028;
+      font-weight: 700;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 14px;
+    }
+    main {
+      max-width: 1100px;
+      margin: 18px auto;
+      padding: 20px;
+    }
+    .hero {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+      padding: 28px;
+      border-radius: 14px;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 20px;
+      align-items: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: white;
+    }
+    p.lead {
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    button, .btn {
+      background: var(--accent);
+      border: none;
+      color: #042028;
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn.secondary {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    section.card {
+      margin-top: 18px;
+      background: var(--card);
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    ul {
+      padding-left: 18px;
+    }
+    footer {
+      color: var(--muted);
+      text-align: center;
+      padding: 18px;
+      margin-top: 30px;
+    }
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+      width: auto;
+      height: auto;
+      background: #fff;
+      color: #000;
+      padding: 8px;
+      border-radius: 6px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -35,15 +154,14 @@
     <div class="brand">
       <div class="logo" aria-hidden>IN</div>
       <div>
-        <div style="font-weight:700;color:#fff">Inclusão nas Escolas</div>
-        <div style="font-size:13px;color:var(--muted)">Empatia, respeito e apoio a todos</div>
+        <div style="font-weight: 700; color: #fff">Inclusão nas Escolas</div>
+        <div style="font-size: 13px; color: var(--muted)">Empatia, respeito e apoio a todos</div>
       </div>
     </div>
     <nav aria-label="Navegação principal">
       <a href="#deficiencias">Deficiências</a>
       <a href="#praticas">Práticas</a>
       <a href="#recursos">Recursos</a>
-      <a href="#readme" id="readme-link">README</a>
     </nav>
   </header>
 
@@ -61,9 +179,9 @@
         </div>
       </div>
 
-      <aside aria-label="Painel lateral" style="padding:8px">
-        <div class="card" style="background:linear-gradient(180deg,#061426,#071428);padding:14px;color:var(--muted);border-radius:12px">
-          <h3 style="color:white">Lembre-se sempre:</h3>
+      <aside aria-label="Painel lateral" style="padding: 8px">
+        <div class="card" style="background: linear-gradient(180deg, #061426, #071428); padding: 14px; color: var(--muted); border-radius: 12px">
+          <h3 style="color: white">Lembre-se sempre:</h3>
           <ul>
             <li>Respeitar as diferenças.</li>
             <li>Praticar empatia.</li>
@@ -75,91 +193,96 @@
     </div>
 
     <section class="card" id="deficiencias" aria-labelledby="def-title">
-      <h2 id="def-title">Principais deficiências e como apoiar</h2>
+      <h2 id="def-title">Principais Deficiências e Como Apoiar</h2>
       <div class="grid">
         <div>
-          <h3>Deficiência visual</h3>
-          <p style="color:var(--muted)">Pode ser cegueira total, parcial ou baixa visão. Necessita de materiais em braille, leitores de tela, alto contraste e descrição de imagens.</p>
+          <h3>Deficiência Visual</h3>
+          <img src="https://cdn.pixabay.com/photo/2017/08/10/07/42/school-2610150_960_720.jpg" alt="Pessoa com deficiência visual usando bengala">
+          <p style="color: var(--muted)">A deficiência visual pode se manifestar como cegueira total, parcial ou baixa visão. Para facilitar a inclusão, é importante utilizar materiais em braille, leitores de tela, alto contraste e descrições de imagens.</p>
           <ul>
-            <li>Descreva imagens ou situações para colegas com baixa visão.</li>
-            <li>Ofereça apoio respeitando sempre a autonomia da pessoa.</li>
+            <li>Descreva imagens ou situações para colegas com baixa visão, promovendo melhor compreensão.</li>
+            <li>Ofereça apoio sempre respeitando a autonomia e a individualidade da pessoa.</li>
           </ul>
         </div>
         <div>
-          <h3>Deficiência auditiva</h3>
-          <p style="color:var(--muted)">Redução parcial ou total da audição.</p>
+          <h3>Deficiência Auditiva</h3>
+          <img src="https://cdn.pixabay.com/photo/2016/03/27/20/59/school-1280534_960_720.jpg" alt="Crianças com intérprete de Libras">
+          <p style="color: var(--muted)">A deficiência auditiva pode ser parcial ou total, afetando a forma como a pessoa percebe sons. Valorizar a Língua Brasileira de Sinais (Libras) e usar recursos visuais é essencial.</p>
           <ul>
-            <li>Fale de frente, articule bem e use recursos visuais.</li>
-            <li>Valorize a Libras e incentive a comunicação inclusiva.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Deficiência física</h3>
-          <p style="color:var(--muted)">Limitações motoras que exigem adaptações do espaço.</p>
-          <ul>
-            <li>Garanta acessibilidade nos ambientes.</li>
-            <li>Ajude em tarefas práticas quando solicitado.</li>
+            <li>Fale de frente, articule bem e use gestos e imagens para facilitar a compreensão.</li>
+            <li>Incentive um ambiente de comunicação inclusivo, onde todos se sintam à vontade para se expressar.</li>
           </ul>
         </div>
 
         <div>
-          <h3>Deficiência intelectual</h3>
-          <p style="color:var(--muted)">Affecta aprendizado, memória e resolução de problemas. Pode variar de leve a grave.</p>
+          <h3>Deficiência Física</h3>
+          <img src="https://cdn.pixabay.com/photo/2016/10/13/05/09/children-1730662_960_720.jpg" alt="Crianças em cadeira de rodas interagindo com colegas">
+          <p style="color: var(--muted)">Limitações motoras que exigem adaptações no espaço. A inclusão passa por garantir acessibilidade e um ambiente que favoreça a participação de todos.</p>
           <ul>
-            <li>Use instruções claras e repetição quando necessário.</li>
-            <li>Ofereça apoio para organizar tarefas e compreender conceitos.</li>
-            <li>Valorize pequenos progressos e conquistas individuais.</li>
+            <li>Assegure que os espaços sejam acessíveis, com rampas e mobiliário adequado.</li>
+            <li>Esteja disponível para ajudar em tarefas práticas, sempre quando solicitado, respeitando a autonomia.</li>
           </ul>
         </div>
 
         <div>
-          <h3>Múltiplas deficiências</h3>
-          <p style="color:var(--muted)">Combinação de duas ou mais deficiências.</p>
+          <h3>Deficiência Intelectual</h3>
+          <img src="https://cdn.pixabay.com/photo/2020/06/18/18/47/kids-5312060_960_720.jpg" alt="Crianças aprendendo juntas">
+          <p style="color: var(--muted)">A deficiência intelectual pode afetar o aprendizado, a memória e a resolução de problemas, variando de leve a grave. O apoio é essencial para que cada aluno possa desenvolver suas habilidades.</p>
           <ul>
-            <li>Pratique paciência e escuta atenta.</li>
-            <li>Respeite o tempo de cada colega.</li>
+            <li>Utilize instruções claras e repita informações quando necessário, promovendo a compreensão.</li>
+            <li>Ofereça suporte para organizar tarefas e ajudar na compreensão de conceitos, sempre valorizando os pequenos progressos.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Múltiplas Deficiências</h3>
+          <img src="https://cdn.pixabay.com/photo/2016/12/23/20/59/children-1938744_960_720.jpg" alt="Crianças com diferentes necessidades interagindo">
+          <p style="color: var(--muted)">Combinação de duas ou mais deficiências. Pratique paciência e escuta atenta ao interagir.</p>
+          <ul>
+            <li>Respeite o tempo de cada colega e esteja aberto a diferentes formas de comunicação.</li>
           </ul>
         </div>
 
         <div>
           <h3>Síndrome de Down</h3>
-          <p style="color:var(--muted)">Condição genética que afeta o desenvolvimento cognitivo e físico.</p>
+          <img src="https://cdn.pixabay.com/photo/2018/03/06/18/36/group-3205568_960_720.jpg" alt="Crianças com Síndrome de Down sorrindo">
+          <p style="color: var(--muted)">Condição genética que afeta o desenvolvimento cognitivo e físico. A inclusão e a aceitação são fundamentais para o desenvolvimento social e emocional.</p>
           <ul>
-            <li>Estimule a participação em grupo.</li>
-            <li>Use linguagem clara e simples.</li>
+            <li>Estimule a participação em atividades em grupo, promovendo a interação e a amizade.</li>
+            <li>Utilize uma linguagem clara e simples, facilitando a comunicação e o entendimento.</li>
           </ul>
         </div>
 
         <div>
           <h3>Transtorno do Espectro Autista (TEA)</h3>
-          <p style="color:var(--muted)">Pode afetar comunicação, interação e sensibilidade a estímulos.</p>
+          <img src="https://cdn.pixabay.com/photo/2016/11/29/02/20/kids-1869266_960_720.jpg" alt="Crianças se comunicando">
+          <p style="color: var(--muted)">O TEA pode afetar a forma como a pessoa se comunica, interage socialmente e percebe estímulos. Criar um ambiente acolhedor é essencial para o bem-estar e a inclusão desses alunos.</p>
           <ul>
-            <li>Seja claro e objetivo na comunicação.</li>
-            <li>Respeite a necessidade de rotina e ambiente calmo.</li>
+            <li>Seja claro e objetivo na comunicação, evitando ambiguidades.</li>
+            <li>Respeite as necessidades de rotina e um ambiente tranquilo, proporcionando segurança.</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="card" id="praticas" aria-labelledby="praticas-title">
-      <h2 id="praticas-title">Práticas inclusivas no dia a dia</h2>
+      <h2 id="praticas-title">Práticas Inclusivas no Dia a Dia</h2>
       <div class="grid">
         <div>
           <h3>Empatia</h3>
-          <p style="color:var(--muted)">Coloque-se no lugar do outro, respeitando suas necessidades e dificuldades.</p>
+          <p style="color: var(--muted)">Coloque-se no lugar do outro, respeitando suas necessidades e dificuldades.</p>
         </div>
         <div>
           <h3>Respeito</h3>
-          <p style="color:var(--muted)">Cada pessoa tem seu jeito de aprender e se expressar. Valorize essas diferenças.</p>
+          <p style="color: var(--muted)">Cada pessoa tem seu jeito de aprender e se expressar. Valorize essas diferenças.</p>
         </div>
         <div>
-          <h3>Ajuda mútua</h3>
-          <p style="color:var(--muted)">Ofereça ajuda, mas sempre pergunte antes se a pessoa deseja esse apoio.</p>
+          <h3>Ajuda Mútua</h3>
+          <p style="color: var(--muted)">Ofereça ajuda, mas sempre pergunte antes se a pessoa deseja esse apoio.</p>
         </div>
         <div>
           <h3>Valorização</h3>
-          <p style="color:var(--muted)">Reconheça os talentos e conquistas de cada colega.</p>
+          <p style="color: var(--muted)">Reconheça os talentos e conquistas de cada colega.</p>
         </div>
       </div>
     </section>
@@ -168,6 +291,27 @@
       <h2 id="recursos-title">Recursos & Ferramentas</h2>
       <div class="grid">
         <div>
-          <h3>Tecnologias assistivas</h3>
+          <h3>Tecnologias Assistivas</h3>
           <ul>
-            <li>Leitores de tela (NVDA, VoiceOver
+            <li>Leitores de tela (NVDA, VoiceOver)</li>
+            <li>Teclados adaptados</li>
+            <li>Softwares de comunicação alternativa</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Materiais Acessíveis</h3>
+          <ul>
+            <li>Livros em braille</li>
+            <li>Materiais audiovisuais</li>
+            <li>Recursos visuais para facilitar a aprendizagem</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Inclusão nas Escolas. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
